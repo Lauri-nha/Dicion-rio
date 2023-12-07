@@ -1,0 +1,188 @@
+* {
+    font-family: Helvetica;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+.name{
+    color: #A91B60;
+    display: flex;
+    justify-content: c;
+}
+
+.worlds{
+    color: #A91B60;
+    display: flex;
+    justify-content: center;
+}
+
+body{
+    padding: 50px;
+    background-color: #fff0ff;
+}
+
+footer{
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+}
+
+summary{
+    color: #A91B60;
+}
+
+.palavras{
+    height: 70vh;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.palavras button{
+    padding: 15px;
+    width: auto;
+}
+
+.coluna-1, .coluna-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+}
+
+
+
+button{
+    padding: 5px;
+    background-color: #FF0080;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.7;
+    font-size: large;
+    transition: 0.4s;
+}
+
+button:hover{
+    opacity: 1;
+}
+
+#fundo-modal, #modal,
+#fundo2, #modal2,
+#fundo3, #modal3,
+#fundo4, #modal4,
+#fundo5, #modal5,
+#fundo6, #modal6,
+#fundo7, #modal7,
+#fundo8, #modal8,
+#fundo9, #modal9,
+#fundo10, #modal10{
+    transition: 0.5s;
+    opacity: 1;
+    pointer-events: all;
+    /* aqui eu estou definindo que todos os eventos irão acontecer quando o pointer (quando o cursor vira uma mãozinha para clicar em algo) for clicado */
+}
+
+#fundo-modal, #fundo2,
+#fundo3, #fundo4,
+#fundo5, #fundo6,
+#fundo7,#fundo8, #fundo9,
+#fundo10{
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* Aqui eu fixei tudo dentro do modal */
+    width: 100%;
+    height: 100%;
+    /* Aqui eu dei largura e altura total ao fundo do modal, para que tudo excento o modal preencha 100% da tela, deixando o fundo opaco */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* rgba, a=alpha, "fundo-modal" é uma div, se eu usar opacity, farei com que tudo dentro desta div ficasse com opacidade, isto inclui o modal. */
+    z-index: 5;
+    /* aqui farei com que tudo fique atrás da div */
+    transition: 0.5s;
+}
+
+#modal, #modal2,
+#modal3, #modal4,
+#modal5, #modal6,
+#modal7, #modal8,
+#modal9, #modal10{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* Aqui eu fixei a minha janela e o seu que vai ser aberta e o seu conteudo para o meio da tela, o transform ajusta as porcentagens para a direita e para baixo quando utilizado o position:fixed*/
+    z-index: 10;
+    /* aqui botei um zindex maior para fazer com que a janela fique a frente do background */
+    background-color: #fff0ff;
+    /* aqui eu defini a cor do background da minha janela para melhor visualização */
+    width: 600px;
+    max-width: 90%;
+    /* aqui eu defini uma largura para a janela e uma largura maxima de 40% para não deixa-la maior do que a tela caso aberto em uma tela menor ou etc */   
+    padding: 45px;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+
+
+
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FF0080;
+    border-bottom: 2px solid #FF0080;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+
+.modal-title2{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #FF0080;
+    border-bottom: 2px solid #FF0080;
+    margin-bottom: 15px;
+}
+
+#modal.hide,
+#fundo-modal.hide,
+#modal2.hide,
+#fundo2.hide,
+#modal3.hide,
+#fundo3.hide,
+#modal4.hide,
+#fundo4.hide,
+#modal5.hide,
+#fundo5.hide,
+#modal6.hide,
+#fundo6.hide,
+#modal7.hide,
+#fundo7.hide,
+#modal8.hide,
+#fundo8.hide,
+#modal9.hide,
+#fundo9.hide,
+#modal10.hide,
+#fundo10.hide{
+    opacity: 0;
+    /* com opacidade eu consigo controlar animações, já com o display:none eu não consigo*/
+    pointer-events: none;
+    /* aqui eu estou estabelecendo nenhum evento de click, para não ocorrer do modal ser aberto se o usuario clicar em qualquer área da tela */
+}
+
+#modal.hide,
+#modal2.hide,
+#modal3.hide,
+#modal4.hide,
+#modal5.hide,
+#modal6.hide,
+#modal7.hide,
+#modal8.hide,
+#modal9.hide,
+#modal10.hide{
+    top: 0;
+}
+
